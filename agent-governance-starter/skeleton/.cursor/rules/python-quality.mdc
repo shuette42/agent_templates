@@ -1,0 +1,10 @@
+---
+description: "Python Quality (nur fuer Python-Projekte)."
+globs: ["**/*.py"]
+alwaysApply: false
+---
+
+# Python Quality
+
+- Format/Lint/Test nach Projektstandard.
+- Keine Secrets in Code.

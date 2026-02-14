@@ -1,0 +1,11 @@
+---
+description: "Hierarchie Rules/Commands/Skills/Subagents."
+alwaysApply: true
+---
+
+# Hierarchie
+
+1. Rules (verbindlich)
+2. Commands (explizit)
+3. Skills (aufgabentypisch)
+4. Subagents

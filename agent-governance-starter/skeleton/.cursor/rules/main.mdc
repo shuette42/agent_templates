@@ -1,0 +1,24 @@
+---
+description: "Baseline Kern-Regeln: Sprache, NO AUTO-COMMIT, keine Secrets."
+alwaysApply: true
+---
+
+# Kern-Regeln (Baseline)
+
+## Kommunikation
+
+- Deutsch, Du-Form.
+
+## NO AUTO-COMMIT
+
+- Nie automatisch committen.
+- Nur bei explizitem User-Wunsch.
+
+## Sicherheit
+
+- Keine Secrets ins Repo.
+- `.env`, Credentials, Keys, Token-Dateien muessen ignoriert sein.
+
+## Hierarchie
+
+Rules > Commands > Skills/Subagents

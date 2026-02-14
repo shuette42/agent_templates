@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [[ -z "${ROOT_DIR:-}" ]]; then
+  echo "Fehler: Repo-Root nicht ermittelbar." >&2
+  exit 1
+fi
+
+# Optional: nur ausfuehren, wenn Skripte vorhanden sind.
+if [[ -x "$ROOT_DIR/scripts/governance/check_governance_consistency.sh" ]]; then
+  "$ROOT_DIR/scripts/governance/check_governance_consistency.sh"
+fi
+if [[ -x "$ROOT_DIR/scripts/governance/docs_link_check.sh" ]]; then
+  "$ROOT_DIR/scripts/governance/docs_link_check.sh"
+fi
+if [[ -x "$ROOT_DIR/scripts/governance/secrets_scan.sh" ]]; then
+  "$ROOT_DIR/scripts/governance/secrets_scan.sh"
+fi

@@ -1,0 +1,9 @@
+---
+description: "Secure Delivery Baseline (generisch)."
+alwaysApply: true
+---
+
+# Secure Delivery
+
+- Secrets nur ueber env oder lokale Config.
+- Rechte/Permissions dokumentieren, keine Klartext-Secrets.

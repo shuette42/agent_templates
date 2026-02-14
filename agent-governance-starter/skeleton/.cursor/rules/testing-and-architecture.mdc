@@ -1,0 +1,9 @@
+---
+description: "Testing + Architektur Baseline."
+alwaysApply: true
+---
+
+# Testing + Architektur
+
+- Aenderungen klein, nachvollziehbar.
+- Tests/Checks wo sinnvoll.

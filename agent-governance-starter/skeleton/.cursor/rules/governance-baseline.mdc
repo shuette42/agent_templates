@@ -1,0 +1,9 @@
+---
+description: "Governance Baseline: Checklisten und Mindeststandard."
+alwaysApply: true
+---
+
+# Governance Baseline
+
+- AGENTS.md ist Quelle fuer Agent-Anweisungen.
+- Keine Duplikation ohne Grund.

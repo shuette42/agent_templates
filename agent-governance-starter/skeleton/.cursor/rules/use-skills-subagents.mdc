@@ -1,0 +1,10 @@
+---
+description: "Wann welche Skills nutzen."
+alwaysApply: true
+---
+
+# Skills nutzen
+
+- Commit/Push: `commit-guardian`
+- Doku: `technical-writer` oder documentation-agent
+- Security: security-checklist
