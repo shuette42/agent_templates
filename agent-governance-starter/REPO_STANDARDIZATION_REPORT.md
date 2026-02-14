@@ -33,10 +33,42 @@ Im Template aufgenommen:
   - `QUICKSTART_PROMPT.md`
   - `PROJECT_EXTENSION_PROMPT.md`
 
+## Hardening-Erweiterung (2026-02-14)
+
+Repo-weit ausgerollte zusaetzliche Baseline:
+
+- `.cursor/rules/secure-delivery.mdc`
+- `.cursor/rules/python-quality.mdc`
+- `.cursor/rules/testing-and-architecture.mdc`
+- `.cursor/skills/changelog-on-commit/SKILL.md`
+- PKV-spezifisch: `.cursor/rules/pkv-security-critical.mdc`
+
+Damit sind Secrets-Schutz, Commit-/Versionierungsdisziplin, Python-Clean-Code, Testfokus und PKV-Sicherheitsanforderungen verbindlich hinterlegt.
+
+## Delivery-Hardening (2026-02-14, Phase 2)
+
+Zusatz-Bausteine fuer reproduzierbare Release-Qualitaet:
+
+- Neue Commands:
+  - `.cursor/commands/secrets-check.md`
+  - `.cursor/commands/release-gate.md`
+- Neues Prompt-Template:
+  - `.codex/prompts/release-readiness.md`
+- Neuer Security-Scanner:
+  - `scripts/<projekt>/secrets_scan.sh` (Modi: `auto|staged|head|tracked`)
+- GitHub-Standards:
+  - `.github/workflows/governance-ci.yml`
+  - `.github/PULL_REQUEST_TEMPLATE.md`
+  - `.github/CODEOWNERS`
+  - `SECURITY.md`
+- Hook-Erweiterung:
+  - `.githooks/pre-commit` fuehrt jetzt Governance + Secrets + Docs aus.
+
 Standardverhalten des Sync-Skripts:
 
 - `openclaw` wird als Referenz standardmaessig uebersprungen.
 - Optional mitziehen: `INCLUDE_REFERENCE_OPENCLAW=1`.
+- Bestehende Baseline-Dateien (Checks/Hooks/USAGE) lassen sich explizit aktualisieren mit `FORCE_UPDATE_BASELINE=1`.
 
 ## Umgesetzte Harmonisierung
 
